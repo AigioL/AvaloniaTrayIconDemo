@@ -1,0 +1,27 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaTrayIconDemo.App">
+	<Application.Styles>
+		<FluentTheme Mode="Light"/>
+	</Application.Styles>
+	<TrayIcon.Icons>
+		<TrayIcons>
+			<TrayIcon Icon="/Assets/test_icon.ico" ToolTipText="Avalonia Tray Icon ToolTip">
+				<TrayIcon.Menu>
+					<NativeMenu>
+						<NativeMenuItem Header="Settings">
+							<NativeMenu>
+								<NativeMenuItem Header="Option 1" ToggleType="Radio" IsChecked="True" />
+								<NativeMenuItem Header="Option 2" ToggleType="Radio" IsChecked="True" />
+								<NativeMenuItemSeparator />
+								<NativeMenuItem Header="Option 3" ToggleType="CheckBox" IsChecked="True" />
+								<NativeMenuItem Icon="/Assets/test_icon.ico" Header="Restore Defaults" />
+							</NativeMenu>
+						</NativeMenuItem>
+						<NativeMenuItem Header="Exit" />
+					</NativeMenu>
+				</TrayIcon.Menu>
+			</TrayIcon>
+		</TrayIcons>
+	</TrayIcon.Icons>
+</Application>
